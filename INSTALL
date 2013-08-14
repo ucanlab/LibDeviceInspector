@@ -1,0 +1,37 @@
+I. Introduction
+LibDeviceInspector is a Android Islibrary project developed by eclipse.
+
+II. Prerequsitions
+1. JDK must be installed (1.6 is strongly recommendded)
+2. Eclipse IDE
+3. Android SDK
+
+III. Include LibDeviceInspector
+The followings steps describe how to use LibDeviceInspector in your Android projects.
+1. Import LibDeviceInspector as "General -> Existing Projects into Workspace" in eclipse.
+2. New an Android project
+3. Right click on your Android project and select "Properties"
+4. In the pop-up Properties window, select Android properties.
+5. In the Android properties, add library and select "LibDeviceInspector".
+6. Programming LibDeviceInspector
+
+IV. Program LibDeviceInspector
+Before calling LibDeviceInspector, you need to new an instance of DeviceInspector
+
+DeviceInspector dev = new DeviceInspector(); 
+
+Then, you can call the functions as follows.
+
+1. How to get local IP address?
+String myip = dev.getLocalIP();
+
+2. How to get CPU frequency?
+String mycpu = dev.getProcessorMHz();
+
+3. How to get storage size?
+String mymem = dev.getExternalStorageSize();
+
+4. How to get battert level?
+private static Context context;	
+context = getApplicationContext();
+String mybattery = dev.getBatteryLevel(context);
